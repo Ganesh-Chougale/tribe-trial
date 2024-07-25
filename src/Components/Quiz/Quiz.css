@@ -1,0 +1,48 @@
+.thisQuiz{
+    background-color: black;
+    height: 420px;
+    width: 420px;
+    border-radius: 40px;
+    /* color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quizBox{
+    width: 400px;
+    height: 420px;
+    background-color: #fff;
+    border: 2px solid greenyellow;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.quesBox{
+  margin-top: 5%;
+  width: 80%;
+  height: 20%;
+}
+.ansBox{
+  width: 80%;
+  height: 60%;
+}
+.btnBox{
+  height: 15%;
+  margin-top: 25px;
+  display: flex;
+}
+li{
+  font-size: 25px;
+  margin: 15px;
+  list-style: none;
+}
+label{
+  margin-left: 20px;
+}
+button{
+  margin-left: 5px;
+}
