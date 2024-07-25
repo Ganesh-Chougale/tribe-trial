@@ -12,9 +12,9 @@
 
   .quizBox{
     width: 400px;
-    height: 420px;
+    height: 410px;
     background-color: #fff;
-    border: 2px solid greenyellow;
+    border: 2px solid rgb(255, 60, 0);
     border-radius: 40px;
     display: flex;
     flex-direction: column;
@@ -43,6 +43,7 @@ li{
 label{
   margin-left: 20px;
 }
-button{
+.bbttnn{
   margin-left: 5px;
+  width: 100%;
 }

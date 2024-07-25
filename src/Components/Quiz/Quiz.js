@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import "./Quiz.css";
 import QB from '../QB/QB';
 
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams, useNavigate } from "react-router-dom";
+
 
 function Quiz() {
 
   const {questionId} = useParams();
+  const hop = useNavigate();
 
   let [currentQIndex, setCurrentQIndex] = useState(0);
 
@@ -20,7 +22,16 @@ function Quiz() {
   const opt2 = QB[currentQIndex].answers.option2;
   const opt3 = QB[currentQIndex].answers.option3;
   const opt4 = QB[currentQIndex].answers.option4;
+
   let curq = currentQIndex+1;
+
+  let btnString;
+
+  if(curq===10){
+    btnString = "End Quiz";
+  }else{
+    btnString = "Next";
+  }
 
 
   console.log(question);
@@ -34,8 +45,9 @@ function Quiz() {
           <h3>{question}</h3>
         </div>
         <div className="ansBox">
+          
           <ul>
-          <li>
+                <li>
                 <input type="radio" name="answer" id="1" />
                     <label htmlFor="1">{opt1}</label>
                 </li>
@@ -52,10 +64,10 @@ function Quiz() {
                     <label htmlFor="4">{opt4}</label>
                 </li>
           </ul>
+
           <div className='btnBox'>
-            <button onClick={nextQ}>Submit</button>
-            <button>End Session</button>
-          </div>
+          <button onClick={nextQ} className='bbttnn'>{btnString}</button>
+        </div>
       </div>
       <br />
 
@@ -69,4 +81,4 @@ function Quiz() {
   )
 }
 
-export default Quiz
+export default Quiz;
